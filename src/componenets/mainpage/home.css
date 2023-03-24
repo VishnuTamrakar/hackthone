@@ -1,0 +1,326 @@
+/*------------About-----------*/
+
+.aboutSection {
+  background: url("../assets/waves.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: #022c4f;
+}
+.about {
+  padding: 60px 0;
+}
+.about .bannerImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.about .left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about .left .title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 50px;
+  color: #fff;
+}
+.about .left p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+.btn {
+  margin-top: 30px;
+  width: 200px;
+  padding: 12px;
+  background-color: rgb(45, 139, 45);
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 10px;
+}
+.about .right {
+  width: 20%;
+}
+
+/*------------------FormList---------------*/
+.formList {
+  margin-top: 50px;
+}
+
+.listBtn a {
+  color: black;
+  padding: 20px;
+  margin-left: 10px;
+  border-bottom: 5px solid rgb(0, 71, 0);
+}
+
+.searchBox {
+  display: flex;
+
+  gap: 20px;
+}
+.searchBox i {
+  width: 5%;
+  text-align: center;
+  padding: 15px 20px;
+  opacity: 0.5;
+  font-size: 15px;
+}
+.searchBox input {
+  margin-top: 5px;
+  width: 200px;
+
+  border: none;
+  outline: none;
+  background-color: none;
+}
+.searchBox input::placeholder {
+  font-size: 18px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-left: 20px;
+}
+.searchBox .selection {
+  width: 130px;
+  padding: 10px;
+  text-align: left;
+
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.searchBox select {
+  font-size: 18px;
+  opacity: 0.5;
+  width: 100px;
+  padding: 2px;
+}
+
+/*---------------Submission Form-----------------*/
+
+.submissionForm {
+  padding: 30px;
+}
+.submissionForm h1 {
+  font-weight: 500;
+  opacity: 0.8;
+}
+.form .heading {
+  margin-bottom: 20px;
+  font-weight: 400;
+  opacity: 0.3;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+.formInput {
+  margin-top: 30px;
+  gap: 10px;
+}
+.formInput input {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1.5px solid rgb(174, 166, 166);
+  opacity: 0.7;
+}
+textarea {
+  height: 200px;
+  padding: 10px;
+  border-radius: 5px;
+}
+::placeholder {
+  font-size: 16px;
+}
+.formInput .dateForm {
+  display: flex;
+  gap: 20px;
+}
+.formInput .dateForm .startDate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formInput .dateForm input {
+  font-size: 17px;
+  opacity: 0.5;
+}
+.formInput .dateForm .endDate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formInput .dateForm input {
+  width: 300px;
+}
+
+/*---------------Card------------------*/
+.cards {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.box {
+  width: 310px;
+  height: 280px;
+  box-shadow: 0 3px 50px #a5a5a5;
+  margin-top: 50px 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.box .insideElement {
+  position: relative;
+  max-width: 80%;
+
+  width: 100%;
+  height: 47vh;
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+}
+
+.box .boxHead {
+  display: flex;
+  align-items: center;
+}
+.boxHead h4 {
+  padding-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.box .image {
+  padding-top: 20px;
+}
+.image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.box .insideElement p {
+  margin-top: 20px;
+}
+.box .insideElement i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+  font-size: 15px;
+}
+
+/*----------------SinglePage-----------------*/
+
+.singlePage {
+  height: 400px;
+  background-color: #022c4f;
+  padding: 80px 0;
+  color: #fff;
+}
+.singlePage img {
+  height: 130px;
+  width: 130px;
+}
+.singlePage h1 {
+  margin-left: 50px;
+  font-weight: 500;
+  font-size: 50px;
+}
+.singlePage p {
+  padding: 30px 0;
+}
+.singlePage .favSection {
+  display: flex;
+  align-items: center;
+}
+.singlePage .left i {
+  padding: 20px;
+}
+.singlePage .left .favIcon::after {
+  content: "";
+  border-right: 1px solid rgb(200, 192, 192);
+  height: 40px;
+}
+
+.singlePage .right .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.singlePage .right button  {
+  padding: 10px;
+  cursor: pointer;
+  width: 130px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+}
+.singlePage .right button  i {
+  margin-right: 10px;
+}
+
+.bottomSection {
+  padding: 60px 0;
+  margin-top: 20px;
+}
+.bottomSection p {
+  line-height: 1.2;
+}
+.bottomSection .left h1 {
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.bottomSection .right h4 {
+  opacity: 0.5;
+  font-weight: 500;
+}
+.bottomSection .right h2 {
+  font-weight: 600;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.bottomSection .left {
+  width: 70%;
+}
+.bottomSection .right {
+  width: 20%;
+}
+.bottomSection .right .dates {
+  opacity: 0.5;
+  padding: 20px 0;
+  font-size: 14px;
+}
+.bottomSection .right .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bottomSection .right .buttons button {
+  padding: 13px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  font-weight: 600;
+  font-size: 16px;
+}
+.bottomSection .right .buttons button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
