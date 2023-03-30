@@ -77,6 +77,7 @@ const FormList = () => {
           <div className={`cards ${noFav ? "justify-center" : ""}`}>
             {data
               .filter((user) => user.title.toLowerCase().includes(search))
+              // eslint-disable-next-line array-callback-return
               .map((obj, index) => {
                 
                 if (obj.favIcon) {
