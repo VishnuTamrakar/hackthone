@@ -1,9 +1,13 @@
-import React, { useContext, useState } from "react";
-import { Link} from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../../context-api/context";
 
-const SubmissionForm = () => {
-  const { uploadData } = useContext(Context);
+const EditForm = ()=>{
+
+  const { upload, updateData } = useContext(Context);
+  let { id } = useParams();
+  let editForm = upload[id];
+//   console.log('editForm', editForm);
 
   const [title, setTitle] = useState("");
   const [sammary, setSammary] = useState("");
@@ -14,33 +18,48 @@ const SubmissionForm = () => {
   const [eDate, setEDate] = useState("");
   const [gitHub, setGitHub] = useState("");
   const [links, setLinks] = useState("");
+  
 
-  const uploadHandle = () => {
+  useEffect(()=>{
+    setTitle(editForm.title)
+    setSammary(editForm.sammary)
+    setDesc(editForm.desc)
+    setImage(editForm.image)
+    setName(editForm.name)
+    setSDate(editForm.sDate)
+    setEDate(editForm.eDate)
+    setGitHub(editForm.gitHub)
+    setLinks(editForm.links)
+    console.log('editForm', editForm);
+  },[])
+  const updateHandle = (e) => {
+    // e.preventDefault();
     let taskObj = {};
-    let date = new Date()
     taskObj["title"] = title;
     taskObj["sammary"] = sammary;
-    taskObj["desc"] = desc;
+    taskObj["desc"] = desc ;
     taskObj["image"] = image;
     taskObj["name"] = name;
     taskObj["startDate"] = sDate;
     taskObj["endDate"] = eDate;
     taskObj["gitHub"] = gitHub;
     taskObj["links"] = links;
-    taskObj["favIcon"] = false;
-    taskObj["created_at"] = date;
-    taskObj["id"] = date.getTime();
-    uploadData(taskObj);
+    
+    updateData(taskObj, id);
+    console.log('taskObj', taskObj);
+
   };
-  // console.log(image);
+  console.log(image)
   const imgFilehandler = (e) => {
     if (e.target.files.length !== 0) {
-      setImage((imgfile) => [
-        ...imgfile,
-        URL.createObjectURL(e.target.files[0]),
-      ]);
+      setImage(imgfile => [...imgfile, URL.createObjectURL(e.target.files[0])])
     }
-  };
+  }
+  
+  
+
+  
+  
 
   return (
     <>
@@ -89,6 +108,7 @@ const SubmissionForm = () => {
                   type="file"
                   id="image"
                   name="image"
+                 
                   onChange={imgFilehandler}
                 />
               </div>
@@ -151,9 +171,11 @@ const SubmissionForm = () => {
                 />
               </div>
               <div className="btn">
-                <Link to="/" onClick={uploadHandle}>
-                  Upload Submission
-                </Link>
+                
+                  <Link to="/" onClick={updateHandle}>
+                     Save
+                  </Link>
+                
               </div>
             </form>
           </div>
@@ -163,4 +185,4 @@ const SubmissionForm = () => {
   );
 };
 
-export default SubmissionForm;
+export default EditForm;

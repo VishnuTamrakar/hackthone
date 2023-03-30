@@ -34,3 +34,12 @@ select,option,input,button{
   
 }
 
+.links {
+  width: 14rem;
+}
+
+.links a{
+  color: #2e2e2e;
+}
+
+
