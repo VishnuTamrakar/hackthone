@@ -33,7 +33,7 @@ const FormList = () => {
           <div className="listBtn">
             <Tabs
               value={activeTab}
-              onChange={(event, value) => setActiveTab(value)}
+              onChange={(event,value) => setActiveTab(value)}
             >
               <Tab label="All Submissions" />
               <Tab label="Favorites" />
@@ -81,7 +81,7 @@ const FormList = () => {
               .map((obj, index) => {
                 
                 if (obj.favIcon) {
-                  return (
+                return (
                     <Link to={`/${index}`}>
                       <Card key={index} obj={obj} />
                     </Link>
