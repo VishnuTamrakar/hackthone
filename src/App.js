@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./componenets/header/Header";
 import EditForm from "./componenets/mainpage/EditForm";
-import Favourite from "./componenets/mainpage/Favourite";
+// import Favourite from "./componenets/mainpage/Favourite";
 import Single from "./componenets/mainpage/Single";
 import SubmissionForm from "./componenets/mainpage/SubmissionForm";
 import NoteContext from "./context-api/context";
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <NoteContext>
-        <BrowserRouter Basename={process.env.test}>
+        <BrowserRouter>
           <Header />
           <Routes>
             <Route path="/" element={<Pages />} />
