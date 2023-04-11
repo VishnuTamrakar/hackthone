@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <NoteContext>
-        <BrowserRouter>
+        <BrowserRouter Basename={process.env.test}>
           <Header />
           <Routes>
             <Route path="/" element={<Pages />} />
