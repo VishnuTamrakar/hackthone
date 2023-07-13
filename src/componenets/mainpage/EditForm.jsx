@@ -31,7 +31,7 @@ const EditForm = ()=>{
     setGitHub(editForm.gitHub)
     setLinks(editForm.links)
     console.log('editForm', editForm);
-  },[])
+  },[editForm])
   const updateHandle = (e) => {
     // e.preventDefault();
     let taskObj = {};
