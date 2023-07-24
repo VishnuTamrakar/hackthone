@@ -33,12 +33,31 @@ const SubmissionForm = () => {
     uploadData(taskObj);
   };
   // console.log(image);
-  const imgFilehandler = (e) => {
+  const convertImageToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+      reader.readAsDataURL(file);
+    });
+  };
+  const imgFilehandler = async (e) => {
     if (e.target.files.length !== 0) {
-      setImage((imgfile) => [
-        ...imgfile,
-        URL.createObjectURL(e.target.files[0]),
-      ]);
+      const file = e.target.files[0];
+      try {
+        const base64String = await convertImageToBase64(file);
+        setImage((prevImages) => [...prevImages, base64String]);
+  
+        // If you want to store all images in local storage
+        const imagesFromLocalStorage = JSON.parse(localStorage.getItem('uploadedImages') || '[]');
+        imagesFromLocalStorage.push(base64String);
+        localStorage.setItem('uploadedImages', JSON.stringify(imagesFromLocalStorage));
+  
+        // If you only want to store the latest image in local storage
+        localStorage.setItem('uploadedImage', base64String);
+      } catch (error) {
+        console.error('Error converting image to Base64:', error);
+      }
     }
   };
 
