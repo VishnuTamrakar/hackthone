@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hackthone/static/css/main.d8f7b821.css",
+    "main.js": "/hackthone/static/js/main.8a1d5ed7.js",
+    "static/media/Hand holding bulb 3D.png": "/hackthone/static/media/Hand holding bulb 3D.1de9c9982695ee0f23a3.png",
+    "static/media/waves.png": "/hackthone/static/media/waves.f63aec7d725d1ad6d4c7.png",
+    "index.html": "/hackthone/index.html",
+    "main.d8f7b821.css.map": "/hackthone/static/css/main.d8f7b821.css.map",
+    "main.8a1d5ed7.js.map": "/hackthone/static/js/main.8a1d5ed7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8f7b821.css",
+    "static/js/main.8a1d5ed7.js"
+  ]
+}
